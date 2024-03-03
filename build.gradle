@@ -1,81 +1,251 @@
+import org.jetbrains.gradle.ext.Gradle
 
-// For those who want the bleeding edge
-buildscript {
-    repositories {
-        jcenter()
-        maven {
-            name = "forge"
-            url = "http://files.minecraftforge.net/maven"
-        }
-        maven { url = "https://plugins.gradle.org/m2/" }
-    }
-    dependencies {
-        classpath 'net.minecraftforge.gradle:ForgeGradle:2.3-SNAPSHOT'
-        classpath 'com.wynprice.cursemaven:CurseMaven:1.2.3'
-    }
+plugins {
+    id 'java'
+    id 'java-library'
+    id 'maven-publish'
+    id 'org.jetbrains.gradle.plugin.idea-ext' version '1.1.7'
+    id 'eclipse'
+    id 'com.gtnewhorizons.retrofuturagradle' version '1.3.30'
+    id 'com.matthewprenger.cursegradle' version '1.4.0'
 }
-apply plugin: 'net.minecraftforge.gradle.forge'
-apply plugin: 'com.wynprice.cursemaven'
 
+version = project.mod_version
+group = project.maven_group
+archivesBaseName = project.archives_base_name
 
-version = "1.10"
-group= "soot" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
-archivesBaseName = "Soot"
+java {
+    toolchain {
+        languageVersion.set(JavaLanguageVersion.of(8))
+        // Azul covers the most platforms for Java 8 toolchains, crucially including MacOS arm64
+        vendor.set(org.gradle.jvm.toolchain.JvmVendorSpec.AZUL)
+    }
+    // Generate sources and javadocs jars when building and publishing
+    withSourcesJar()
+    // withJavadocJar()
+}
 
-sourceCompatibility = JavaVersion.VERSION_1_8
-targetCompatibility = JavaVersion.VERSION_1_8
+tasks.withType(JavaCompile).configureEach {
+    options.encoding = 'UTF-8'
+}
+
+configurations {
+    embed
+    implementation.extendsFrom(embed)
+}
+
+jar {
+    manifest {
+        def attribute_map = [:]
+        if (project.use_coremod.toBoolean()) {
+            attribute_map['FMLCorePlugin'] = project.coremod_plugin_class_name
+            if (project.include_mod.toBoolean()) {
+                attribute_map['FMLCorePluginContainsFMLMod'] = true
+                attribute_map['ForceLoadAsMod'] = project.gradle.startParameter.taskNames[0] == "build"
+            }
+        }
+        if (project.use_access_transformer.toBoolean()) {
+            attribute_map['FMLAT'] = 'embers_at.cfg'
+        }
+        attributes(attribute_map)
+    }
+    // Add all embedded dependencies into the jar
+    from(provider { configurations.embed.collect { it.isDirectory() ? it : zipTree(it) } })
+}
 
 minecraft {
-    version = "1.12.2-14.23.5.2838"
-    //version = "1.12.2-14.23.0.2512"
-    runDir = "run"
-    mappings = "snapshot_20171003"
-    useDepAts = true
+    mcVersion = project.mc_version
+    // MCP Mappings
+    mcpMappingChannel = 'snapshot'
+    mcpMappingVersion = '20171003'
+
+    // Set username here, the UUID will be looked up automatically
+    username = '_MasterEnderman_'
+
+    // Add any additional tweaker classes here
+    // extraTweakClasses.add('org.spongepowered.asm.launch.MixinTweaker')
+
+    // Add various JVM arguments here for runtime
+    def args = ["-ea:${project.group}"]
+    if (project.use_coremod.toBoolean()) {
+        args << '-Dfml.coreMods.load=' + coremod_plugin_class_name
+    }
+    if (project.use_mixins.toBoolean()) {
+        args << '-Dmixin.hotSwap=true'
+        args << '-Dmixin.checks.interfaces=true'
+        args << '-Dmixin.debug.export=true'
+    }
+    extraRunJvmArguments.addAll(args)
+
+    // Include and use dependencies' Access Transformer files
+    useDependencyAccessTransformers = true
+
+    // Add any properties you want to swap out for a dynamic value at build time here
+    // Any properties here will be added to a class at build time, the name can be configured below
+    // Example:
+    // injectedTags.put('VERSION', project.version)
+    // injectedTags.put('MOD_ID', project.archives_base_name)
 }
 
 repositories {
-    maven { url 'http://dvs1.progwml6.com/files/maven' }
-    maven { url "http://blamejared.com/maven" }
-    maven { url "http://www.ryanliptak.com/maven/" }
-    maven { url "http://maven.covers1624.net/" }
+    maven { url "https://repo.spongepowered.org/maven" }
+    maven { url "https://repo.cleanroommc.com/releases" }
+    maven { url "https://dvs1.progwml6.com/files/maven" }
+    maven { url "https://maven.blamejared.com/" }
+    maven { url "https://www.ryanliptak.com/maven/" }
     maven { url "https://maven.thiakil.com/" }
+    maven {
+        name 'GTNH Maven'
+        url 'https://nexus.gtnewhorizons.com/repository/public/'
+    }
+    maven {
+        name 'GTCEu Maven'
+        url 'https://maven.gtceu.com'
+    }
+    maven {
+        name 'CurseMaven'
+        url 'https://cursemaven.com'
+        content {
+            includeGroup 'curse.maven'
+        }
+    }
+    mavenLocal() // Must be last for caching to work
 }
 
 dependencies {
-    compile "CraftTweaker2:CraftTweaker2-MC1120-Main:1.12-4.1.20.582"
-    compile "mezz.jei:jei_1.12.2:4.14.4.267"
-    compile "com.azanor.baubles:Baubles:1.12-1.5.2"
-    deobfCompile curse.resolveUrl("https://www.curseforge.com/minecraft/mc-mods/embers-rekindled/files/3010691")
-	compile files('libs/')
-}
+    // Common:
+    annotationProcessor 'org.ow2.asm:asm-debug-all:5.2'
+    annotationProcessor 'com.google.guava:guava:32.1.2-jre'
+    annotationProcessor 'com.google.code.gson:gson:2.8.9'
 
-task deobfJar(type: Jar) {
-    from sourceSets.main.output
-    classifier "dev"
-}
-
-artifacts {
-    archives deobfJar
-}
-
-processResources
-{
-    // this will ensure that this task is redone when the versions change.
-    inputs.property "version", project.version
-    inputs.property "mcversion", project.minecraft.version
-
-    // replace stuff in mcmod.info, nothing else
-    from(sourceSets.main.resources.srcDirs) {
-        include 'mcmod.info'
-                
-        // replace version and mcversion
-        expand 'version':project.version, 'mcversion':project.minecraft.version
+    // RetroFuturaGradle:
+    String mixinBooter = modUtils.enableMixins('zone.rong:mixinbooter:9.1')
+    // modUtils.enableMixins('zone.rong:mixinbooter:9.1', 'mod_id.mixins.refmap.json') << add refmap name as 2nd arg (optional)
+    api(mixinBooter) {
+        transitive = false
     }
-        
-    // copy everything else, thats not the mcmod.info
-    from(sourceSets.main.resources.srcDirs) {
-        exclude 'mcmod.info'
+    annotationProcessor(mixinBooter) {
+        transitive = false
+    }
+
+    implementation "CraftTweaker2:CraftTweaker2-API:4.1.8.476"
+    implementation "CraftTweaker2:ZenScript:4.1.8.476"
+    implementation "CraftTweaker2:CraftTweaker2-MC1120-Main:1.12-4.1.8.476"
+
+    implementation rfg.deobf("curse.maven:had-enough-items-557549:4810661")
+    implementation("com.cleanroommc:groovyscript:0.7.3") { transitive = false } // so it doesn't installs JEI
+
+    compileOnly "com.azanor.baubles:Baubles:1.12-1.5.2"
+    if (project.debug_baubles.toBoolean() || project.debug_aetherworks.toBoolean()) {
+        runtimeOnly "com.azanor.baubles:Baubles:1.12-1.5.2"
+    }
+
+    compileOnly rfg.deobf("curse.maven:mysticalmechanics-300742:3006392")
+    if (project.debug_mysticalmechanics.toBoolean() || project.debug_mysticalgears.toBoolean() || project.debug_mechanicalcrafting.toBoolean()) {
+        runtimeOnly rfg.deobf("curse.maven:mysticalmechanics-300742:3006392")
+    }
+
+    compileOnly rfg.deobf("curse.maven:mechanical-crafting-359671:3273914")
+    if (project.debug_mechanicalcrafting.toBoolean()) {
+        runtimeOnly rfg.deobf("curse.maven:mechanical-crafting-359671:3273914")
+    }
+
+    compileOnly rfg.deobf("curse.maven:mystical-gears-317915:3206298")
+    if (project.debug_mysticalgears.toBoolean()) {
+        runtimeOnly rfg.deobf("curse.maven:mystical-gears-317915:3206298")
+    }
+
+    compileOnly rfg.deobf("curse.maven:aetherworks-293905:2565793")
+    if (project.debug_aetherworks.toBoolean() || project.debug_aetheriumashenarmor.toBoolean()) {
+        runtimeOnly rfg.deobf("curse.maven:aetherworks-293905:2565793")
+    }
+
+    compileOnly rfg.deobf("curse.maven:aetherium-ashen-armor-359467:3022388")
+    if (project.debug_aetheriumashenarmor.toBoolean()) {
+        runtimeOnly rfg.deobf("curse.maven:aetherium-ashen-armor-359467:3022388")
+    }
+
+    compileOnly rfg.deobf("curse.maven:embersified-303584:2621911")
+    if (project.debug_embersified.toBoolean()) {
+        runtimeOnly rfg.deobf("curse.maven:embersified-303584:2621911")
+    }
+
+    runtimeOnly rfg.deobf("curse.maven:the-one-probe-community-edition-885670:4942348")
+    runtimeOnly rfg.deobf("curse.maven:vintagefix-871198:5010926")
+    runtimeOnly rfg.deobf("curse.maven:startup-timer-782070:5001902")
+}
+
+// Adds Access Transformer files to tasks
+if (project.use_access_transformer.toBoolean()) {
+    for (File at : sourceSets.getByName("main").resources.files) {
+        if (at.name.toLowerCase().endsWith("_at.cfg")) {
+            tasks.deobfuscateMergedJarToSrg.accessTransformerFiles.from(at)
+            tasks.srgifyBinpatchedJar.accessTransformerFiles.from(at)
+        }
     }
 }
 
-idea { module { inheritOutputDirs = true } }
+processResources {
+    // This will ensure that this task is redone when the versions change
+    inputs.property 'version', project.version
+    inputs.property 'mcversion', project.minecraft.version
+
+    // Replace various properties in mcmod.info and pack.mcmeta if applicable
+    filesMatching(['mcmod.info', 'pack.mcmeta']) { fcd ->
+        // Replace version and mcversion
+        fcd.expand(
+                'version': project.version,
+                'mcversion': project.minecraft.version
+        )
+    }
+
+    if (project.use_access_transformer.toBoolean()) {
+        rename '(.+_at.cfg)', 'META-INF/$1' // Make sure Access Transformer files are in META-INF folder
+    }
+}
+
+idea {
+    module {
+        inheritOutputDirs = true
+        downloadSources = true
+    }
+    project {
+        settings {
+            runConfigurations {
+                "1. Run Client"(Gradle) {
+                    taskNames = ["runClient"]
+                }
+                "2. Run Server"(Gradle) {
+                    taskNames = ["runServer"]
+                }
+                "3. Run Obfuscated Client"(Gradle) {
+                    taskNames = ["runObfClient"]
+                }
+                "4. Run Obfuscated Server"(Gradle) {
+                    taskNames = ["runObfServer"]
+                }
+            }
+            compiler.javac {
+                afterEvaluate {
+                    javacAdditionalOptions = "-encoding utf8"
+                    moduleJavacAdditionalOptions = [
+                            (project.name + ".main"): tasks.compileJava.options.compilerArgs.collect { '"' + it + '"' }.join(' ')
+                    ]
+                }
+            }
+        }
+    }
+}
+
+publishing {
+    publications {
+        maven(MavenPublication) {
+            artifactId archivesBaseName
+            from components.java
+        }
+    }
+}
+
+tasks.named("processIdeaSettings").configure {
+    dependsOn("injectTags")
+}
