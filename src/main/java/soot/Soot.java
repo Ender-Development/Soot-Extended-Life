@@ -18,10 +18,9 @@ import soot.projectiles.ProjectileFireBlast;
 import soot.recipe.CraftingRegistry;
 import soot.util.Attributes;
 import teamroots.embers.Embers;
-import teamroots.embers.config.ConfigAddon;
 import teamroots.embers.register.ItemRegister;
 
-@Mod(modid = Soot.MODID, name = Soot.NAME, acceptedMinecraftVersions = Embers.VERSIONS, dependencies = Soot.DEPENDENCIES)
+@Mod(modid = Soot.MODID, name = Soot.NAME, acceptedMinecraftVersions = "[1.12.2]", dependencies = Soot.DEPENDENCIES)
 @Mod.EventBusSubscriber
 public class Soot {
     @Mod.Instance(Soot.MODID)
@@ -29,7 +28,7 @@ public class Soot {
 
     public static final String MODID = "soot";
     public static final String NAME = "Soot";
-    public static final String DEPENDENCIES = "required-after:embers";
+    public static final String DEPENDENCIES = "required-after:embers;after:mixinbooter@[8.0,);";
 
     public static Logger log;
 

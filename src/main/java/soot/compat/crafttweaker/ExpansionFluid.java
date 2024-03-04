@@ -50,7 +50,7 @@ public class ExpansionFluid {
 
         @Override
         public String describe() {
-            return null;
+            return "Adding Mug Model for " + fluid.getName();
         }
     }
 

@@ -10,7 +10,7 @@ import net.minecraftforge.event.entity.living.LivingHurtEvent;
 import net.minecraftforge.fml.common.eventhandler.EventPriority;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import soot.Config;
-import teamroots.embers.RegistryManager;
+import teamroots.embers.register.ItemRegister;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -28,7 +28,7 @@ public class GolemHandler {
         if(Config.GOLEMS_TYRFING_WEAK && source.getImmediateSource() instanceof EntityLivingBase)
         {
             EntityLivingBase attacker = (EntityLivingBase) source.getImmediateSource();
-            if(attacker.getHeldItemMainhand().getItem() == RegistryManager.tyrfing && isGolem(target))
+            if(attacker.getHeldItemMainhand().getItem() == ItemRegister.TYRFING && isGolem(target))
                 event.setAmount(damage * 2.5f + 1.0f);
         }
     }

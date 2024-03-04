@@ -13,9 +13,9 @@ import soot.tile.overrides.TileEntityAlchemyPedestalImproved;
 import soot.util.EmberUtil;
 import soot.util.IMigrateable;
 import soot.util.MigrationUtil;
-import teamroots.embers.RegistryManager;
 import teamroots.embers.block.BlockAlchemyPedestal;
 import teamroots.embers.item.ItemTinkerHammer;
+import teamroots.embers.register.BlockRegister;
 
 import javax.annotation.Nullable;
 
@@ -43,6 +43,6 @@ public class BlockAlchemyPedestalImproved extends BlockAlchemyPedestal implement
 
     @Override
     public IBlockState getReplacementState(IBlockState state) {
-        return RegistryManager.alchemy_pedestal.getDefaultState().withProperty(isTop,state.getValue(isTop));
+        return BlockRegister.ALCHEMY_PEDESTAL.getDefaultState().withProperty(isTop,state.getValue(isTop));
     }
 }
