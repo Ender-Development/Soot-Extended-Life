@@ -1,16 +1,19 @@
 [
-{
-  "modid": "soot",
-  "name": "Soot",
-  "description": "An Embers addon.",
-  "version": "${version}",
-  "mcversion": "${mcversion}",
-  "url": "",
-  "updateUrl": "",
-  "authorList": ["BordListian"],
-  "credits": "Forge, Elucent",
-  "logoFile": "",
-  "screenshots": [],
-  "dependencies": []
-}
+  {
+    "modid": "soot",
+    "name": "Soot Unofficial Extended Life",
+    "description": "The continuation of an Embers addon.",
+    "version": "${version}",
+    "mcversion": "${mcversion}",
+    "url": "https://github.com/Ender-Development/Soot-Extended-Life",
+    "updateUrl": "",
+    "authorList": [
+      "BordListian",
+      "Ender-Development"
+    ],
+    "credits": "Forge, Elucent",
+    "logoFile": "",
+    "screenshots": [],
+    "dependencies": []
+  }
 ]
