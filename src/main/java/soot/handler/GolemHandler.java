@@ -9,7 +9,7 @@ import net.minecraftforge.event.entity.living.LivingEvent;
 import net.minecraftforge.event.entity.living.LivingHurtEvent;
 import net.minecraftforge.fml.common.eventhandler.EventPriority;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
-import soot.Config;
+import soot.config.ConfigSoot;
 import teamroots.embers.register.ItemRegister;
 
 import java.util.HashMap;
@@ -25,7 +25,7 @@ public class GolemHandler {
         float damage = event.getAmount();
         DamageSource source = event.getSource();
 
-        if(Config.GOLEMS_TYRFING_WEAK && source.getImmediateSource() instanceof EntityLivingBase)
+        if(ConfigSoot.GOLEMS_TYRFING_WEAK && source.getImmediateSource() instanceof EntityLivingBase)
         {
             EntityLivingBase attacker = (EntityLivingBase) source.getImmediateSource();
             if(attacker.getHeldItemMainhand().getItem() == ItemRegister.TYRFING && isGolem(target))
@@ -37,7 +37,7 @@ public class GolemHandler {
     public static void onEntityTick(LivingEvent.LivingUpdateEvent event)
     {
         EntityLivingBase target = event.getEntityLiving();
-        if(Config.GOLEMS_POISON_IMMUNE && isGolem(target) && target.isPotionActive(MobEffects.POISON))
+        if(ConfigSoot.GOLEMS_POISON_IMMUNE && isGolem(target) && target.isPotionActive(MobEffects.POISON))
         {
             target.removePotionEffect(MobEffects.POISON);
         }

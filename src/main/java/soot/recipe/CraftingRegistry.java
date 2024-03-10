@@ -33,12 +33,12 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.oredict.OreDictionary;
 import net.minecraftforge.oredict.OreIngredient;
 import net.minecraftforge.registries.ForgeRegistry;
-import soot.Config;
 import soot.Registry;
 import soot.Soot;
 import soot.brewing.*;
 import soot.brewing.deliverytypes.DeliveryBlast;
 import soot.compat.jei.ExtraRecipeInfo;
+import soot.config.ConfigSoot;
 import soot.item.ItemEssence;
 import soot.recipe.breweffects.*;
 import soot.tile.TileEntityStillBase;
@@ -147,7 +147,7 @@ public class CraftingRegistry {
         }
         RecipeRegistry.stampingRecipes.add(new ItemLiverStampingRecipe());
 
-        if (Config.RENAME_STAMP)
+        if (ConfigSoot.RENAME_STAMP)
             RecipeRegistry.stampingRecipes.add(new ItemRenameStampingRecipe());
 
         RecipeRegistry.meltingRecipes.add(new ItemMeltingRecipe(Ingredient.fromItem(Items.SUGAR), FluidRegistry.getFluidStack("sugar", 16))); //Nugget size -> you can combine sugar and lead into antimony without remainder and 1000 sugar store nicely in a fluid vessel
