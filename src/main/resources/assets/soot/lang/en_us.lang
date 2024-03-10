@@ -399,3 +399,12 @@ cfg.soot.overrides=Overrides
 cfg.soot.overrides.desc=Overrides for various Embers Machinery
 cfg.soot.sulfur_ore=Sulfur Ore
 cfg.soot.sulfur_ore.desc=Config options for Sulfur Ore
+
+soot.physicalDamageRate=Physical Damage Rate
+soot.experienceRate=Experience Rate
+soot.fireDamageRate=Fire Damage Rate
+soot.fireAspect=Fire Aspect
+soot.barehandedPower=Barehanded Power
+soot.witchburn=Witchburn
+soot.attraction=Attraction
+soot.attraction_generation=Attraction Generation
