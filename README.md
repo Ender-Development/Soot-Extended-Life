@@ -22,8 +22,10 @@ You can download the latest files here on [curseforge](https://curseforge.com/mi
 
 Current Changes to Soot v1.10:
 - switched to [RetroFuturaGradle](https://github.com/GTNewHorizons/RetroFuturaGradle)
-- updated dependencies to maintained forks
+- Soot now depends on [Embers UEL](https://curseforge.com/minecraft/mc-mods/embers-extended-life)
 - overhauled the config system to allow config changes in-game
+- fixed a CraftTweaker bug, that made some methods unusable
+- improved localization
 
 Planned Changes:
 - native [GroovyScript](https://github.com/CleanroomMC/GroovyScript) support
