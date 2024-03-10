@@ -100,6 +100,9 @@ public class CraftingRegistry {
             Item item = stack.getItem();
             return item instanceof ItemTool && item.getToolClasses(stack).contains("pickaxe") && ((ItemTool) item).getToolMaterialName().toLowerCase().contains("lead");
         });
+        if (leadPickaxe.getMatchingStacks().length == 0) {
+            leadPickaxe = Ingredient.fromItem(Items.IRON_PICKAXE);
+        }
         RecipeRegistry.alchemyRecipes.add(new AlchemyRecipe(new AspectList.AspectRangeList().setRange("dawnstone", 8, 16), blankGlass, Lists.newArrayList(aspectDawnstone), Registry.ESSENCE.getStack(EssenceType.NULL, 32)));
         RecipeRegistry.alchemyRecipes.add(new AlchemyRecipe(new AspectList.AspectRangeList().setRange("copper", 16, 32).setRange("lead", 32, 64), blankGlass, Lists.newArrayList(ingotLead, Ingredient.fromItem(ItemRegister.ASPECTUS_LEAD), ingotLead, Ingredient.fromItem(ItemRegister.ARCHAIC_CIRCUIT)), new ItemStack(Registry.ALCHEMY_GLOBE)));
         RecipeRegistry.alchemyRecipes.add(new AlchemyRecipe(new AspectList.AspectRangeList().setRange("silver", 24, 56).setRange("iron", 32, 64), distillationPipe, Lists.newArrayList(fluidPipe, blankGlass, fluidPipe, accessor), new ItemStack(Registry.DECANTER)));
