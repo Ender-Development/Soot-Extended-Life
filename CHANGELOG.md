@@ -2,6 +2,17 @@
 
 A dwarven magic addon
 
+## v1.11.1 - Bugfixes
+### Changes
+- renamed attributes and added missing localization
+- updated dependencies
+- tweaked build scripts
+
+### Bugfixes
+- fixed a few broken config options
+- fixed broken recipe, when no lead pickaxe is present
+- fixed broken links in README.md
+
 ## v1.11.0 - UEL
 ### Changes
 - added CHANGELOG.md
