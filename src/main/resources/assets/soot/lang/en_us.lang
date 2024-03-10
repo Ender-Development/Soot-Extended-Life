@@ -268,10 +268,15 @@ effect.experience_boost=Experience Boost
 embers.tooltip.modifier.mundane=Mundane %s
 embers.tooltip.modifier.witchburn=Witchburn %s
 
-attribute.name.generic.physicalDamageRate=Physical Damage Taken
-attribute.name.generic.fireDamageRate=Fire Damage Taken
-attribute.name.generic.fireAspect=Fire Aspect
-attribute.name.generic.barehandedPower=Barehanded Attack Damage
+attribute.name.soot.physical_damage_rate=Physical Damage Taken
+attribute.name.soot.fire_damage_rate=Fire Damage Taken
+attribute.name.soot.fire_aspect=Fire Aspect
+attribute.name.soot.barehandedPower=Barehanded Attack Damage
+
+attribute.name.soot.experience_rate=Experience Rate
+attribute.name.soot.witchburn=Witchburn
+attribute.name.soot.attraction=Attraction
+attribute.name.soot.attraction_generation=Attraction Generation
 
 death.attack.witchBurn=%1$s burnt at the stake
 death.attack.scalding=%1$s drank too much hot coffee

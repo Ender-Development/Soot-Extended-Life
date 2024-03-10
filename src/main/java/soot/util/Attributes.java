@@ -18,14 +18,14 @@ import java.util.Random;
 
 
 public class Attributes {
-    public static final IAttribute PHYSICAL_DAMAGE_RATE = new RangedAttribute(null, "generic.physicalDamageRate", 1.0D, 0.0D, 2048.0D);
-    public static final IAttribute EXPERIENCE_RATE = new RangedAttribute(null, "generic.experienceRate", 1.0D, 0.0D, 2048.0D);
-    public static final IAttribute FIRE_DAMAGE_RATE = new RangedAttribute(null, "generic.fireDamageRate", 1.0D, 0.0D, 2048.0D);
-    public static final IAttribute FIRE_ASPECT = new RangedAttribute(null, "generic.fireAspect", 0.0D, 0.0D, 72000.0D);
-    public static final IAttribute BAREHANDED_POWER = new RangedAttribute(null, "generic.barehandedPower", 1.0D, 0.0D, 2048.0D);
-    public static final IAttribute WITCHBURN = new RangedAttribute(null, "generic.witchburn", 0.0D, 0.0D, Double.MAX_VALUE).setShouldWatch(true);
-    public static final IAttribute ATTRACTION = new RangedAttribute(null, "generic.attraction", 0.0D, 0.0D, Double.MAX_VALUE).setShouldWatch(true);
-    public static final IAttribute ATTRACTION_GENERATION = new RangedAttribute(null, "generic.attraction_generation", 0.0D, 0.0D, Double.MAX_VALUE).setShouldWatch(true);
+    public static final IAttribute PHYSICAL_DAMAGE_RATE = new RangedAttribute(null, "soot.physical_damage_rate", 1.0D, 0.0D, 2048.0D);
+    public static final IAttribute EXPERIENCE_RATE = new RangedAttribute(null, "soot.experience_rate", 1.0D, 0.0D, 2048.0D);
+    public static final IAttribute FIRE_DAMAGE_RATE = new RangedAttribute(null, "soot.fire_damage_rate", 1.0D, 0.0D, 2048.0D);
+    public static final IAttribute FIRE_ASPECT = new RangedAttribute(null, "soot.fire_aspect", 0.0D, 0.0D, 72000.0D);
+    public static final IAttribute BAREHANDED_POWER = new RangedAttribute(null, "soot.barehandedpower", 1.0D, 0.0D, 2048.0D);
+    public static final IAttribute WITCHBURN = new RangedAttribute(null, "soot.witchburn", 0.0D, 0.0D, Double.MAX_VALUE).setShouldWatch(true);
+    public static final IAttribute ATTRACTION = new RangedAttribute(null, "soot.attraction", 0.0D, 0.0D, Double.MAX_VALUE).setShouldWatch(true);
+    public static final IAttribute ATTRACTION_GENERATION = new RangedAttribute(null, "soot.attraction_generation", 0.0D, 0.0D, Double.MAX_VALUE).setShouldWatch(true);
     public static final double ATTRACTION_STACK = 100;
 
     private static final Random random = new Random();

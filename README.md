@@ -3,11 +3,11 @@
 # Soot - Unofficial Extended Life
 
 [![License](https://img.shields.io/github/license/Ender-Development/Soot-Extended-Life.svg?label=License)](LICENSE)
-[![Versions](https://img.shields.io/curseforge/game-versions/936489?logo=curseforge&label=Game%20Version)](https://www.curseforge.com/minecraft/mc-mods/soot-extended-life)
-[![Downloads](https://img.shields.io/curseforge/dt/936489?logo=curseforge&label=Downloads)](https://www.curseforge.com/minecraft/mc-mods/soot-extended-life)
+[![Versions](https://img.shields.io/curseforge/game-versions/982730?logo=curseforge&label=Game%20Version)](https://www.curseforge.com/minecraft/mc-mods/soot-extended-life)
+[![Downloads](https://img.shields.io/curseforge/dt/982730?logo=curseforge&label=Downloads)](https://www.curseforge.com/minecraft/mc-mods/soot-extended-life)
 
 *A dwarven magic addon*
-• [CurseForge](https://curseforge.com/minecraft/mc-mods/esoot-extended-life)
+• [CurseForge](https://curseforge.com/minecraft/mc-mods/soot-extended-life)
 • [Changelog](CHANGELOG.md)
 • [Bugtracker](https://github.com/Ender-Development/Soot-Extended-Life/issues)
 

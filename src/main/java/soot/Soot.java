@@ -20,7 +20,7 @@ import soot.util.Attributes;
 import teamroots.embers.Embers;
 import teamroots.embers.register.ItemRegister;
 
-@Mod(modid = Soot.MODID, name = Soot.NAME, acceptedMinecraftVersions = "[1.12.2]", dependencies = Soot.DEPENDENCIES)
+@Mod(modid = Soot.MODID, name = Soot.NAME, acceptedMinecraftVersions = Soot.VERSIONS, dependencies = Soot.DEPENDENCIES)
 @Mod.EventBusSubscriber
 public class Soot {
     @Mod.Instance(Soot.MODID)
@@ -28,7 +28,8 @@ public class Soot {
 
     public static final String MODID = "soot";
     public static final String NAME = "Soot";
-    public static final String DEPENDENCIES = "required-after:embers@[1.21.0,);after:mixinbooter@[8.0,);";
+    public static final String DEPENDENCIES = "required-after:embers@[1.23.0,);after:mixinbooter@[8.0,);";
+    public static final String VERSIONS = Embers.VERSIONS;
 
     public static Logger log;
 

@@ -5,7 +5,7 @@ import soot.Soot;
 import teamroots.embers.Embers;
 
 
-@Config(modid = Soot.MODID, category = "soot", name = "Embers/addons/" + "soot")
+@Config(modid = Soot.MODID, category = "soot", name = Embers.CFG_ADDONS_FOLDER + "soot")
 @Config.LangKey("cfg.soot.soot")
 public class ConfigSoot {
 
