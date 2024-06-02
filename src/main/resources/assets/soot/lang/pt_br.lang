@@ -1,0 +1,401 @@
+itemGroup.soot=Fuligem
+
+soot.tooltip.upgrade.distillation_pipe=Pode destilar duas vezes
+soot.tooltip.migrate=Clique com o botão direito com o Martelo Tinker
+soot.tooltip.eitr=Degrada armadura ao acertar
+
+embers.jei.recipe.alchemical_mixer=Receita da Mesa Alquímica
+embers.jei.recipe.still=Receita do Alambique
+
+embers.research.page.sulfur=Enxofre
+embers.research.page.sulfur.title=Vento Corrosivo
+embers.research.page.sulfur.desc=As cavernas não estão apenas cheias de riquezas minerais e criaturas malignas. Às vezes, você pode encontrar um curioso orifício de terra e pedra. Quando perturbado, esse respiradouro exala uma nuvem de enxofre que forma uma substância corrosiva em contato com o ar úmido da caverna. O enorme pedaço de enxofre obtido ao coletá-los ainda não é adequado para fabricação posterior e precisa ser pulverizado em um Moedor primeiro.
+
+embers.research.page.redstone_bin=Recipiente com Alçapão
+embers.research.page.redstone_bin.title=Quedas Controladas
+embers.research.page.redstone_bin.desc=Às vezes, você pode querer soltar um lote inteiro de lixo de uma vez. O Recipiente com Alçapão funciona exatamente como sua contraparte normal, mas quando um sinal de redstone é aplicado, o fundo se abre e todo o seu conteúdo cai imediatamente.
+
+embers.research.page.insulation=Isolamento
+embers.research.page.insulation.title=Conservação de Calor
+embers.research.page.insulation.desc=A Bobina de Lareira é uma máquina espetacular. E tão espetacular é o seu consumo de Brasas para ficar acesa. Essas novas melhorias de Isolamento podem ajudar um pouco. Cada melhoria de Isolamento aumenta o calor máximo da bobina significativamente e, adicionalmente, reduz a velocidade de resfriamento em 30%. Com algum design de redstone, você pode aumentar significativamente a eficiência da bobina desta forma...
+
+embers.research.page.scale=Balança
+embers.research.page.scale.title=Copos de Medição
+embers.research.page.scale.desc=A Alquimia é um trabalho ingrato e muito manual. As Cinzas precisam ser medidas com precisão, ou seus componentes valiosos serão apenas incinerados. Esperançosamente, este dispositivo pode ajudar a fazer exatamente isso. Ao conectar dois recipientes à metade superior da Balança, a metade inferior emitirá um sinal de redstone na direção anti-horário para o recipiente mais pesado, ou ambos os lados se forem iguais.
+
+embers.research.page.advanced_emitters=Transferência Avançada de Brasa
+embers.research.page.advanced_emitters.title=Um para Muitos e Muitos para Um
+embers.research.page.advanced_emitters.desc=A Dispersão de Brasa pode emitir brasa em até 5 direções diferentes que podem ser ligadas a máquinas diferentes. Basta conectar cada lado como faria com um emissor normal e ativá-lo com um sinal de redstone.
+
+embers.research.page.eitr=Eitr
+embers.research.page.eitr.title=Por que Miyazaki?
+embers.research.page.eitr.desc=Ao investigar o enxofre que você descobriu nas Cavernas, você criou a união perfeita das mecânicas favoritas de todos. Eitr é um pedaço de metal desprezível infundido com substâncias alquímicas que corroem qualquer coisa que toca. É muito fraco, ainda mais fraco que seu reflexo, o Tyrfing cinzento. Mas ao golpear um inimigo, metade do dano será convertido em dano puro de durabilidade na armadura do oponente.
+
+embers.research.page.alchemy_globe=Recombinador Alquímico
+embers.research.page.alchemy_globe.title=Disseminação Hifenizada
+embers.research.page.alchemy_globe.desc=Através da experimentação alquímica, você alcançou um avanço. Você quadrou os frascos e diminuiu os círculos. Ou talvez vice-versa. Você projetou um recipiente capaz de conter a centelha alquímica usada para criá-lo em forma condensada. O dispositivo ondula o tecido da realidade ao seu redor e é capaz de forçar fluidos nos mesmos processos alquímicos que a tábua de troca permite que você execute.
+embers.research.page.alchemy_globe_setup.desc=Para montar uma configuração de mistura alquímica, comece colocando o globo em qualquer lado do bloco superior de uma Centrífuga Misturadora. Em seguida, coloque qualquer número de pedestais ao redor dela. Qualquer bloco de um pedestal deve estar no mesmo plano que o globo. Aplique aspectos de metal aos pedestais como de costume.
+embers.research.page.alchemy_globe_crafting.desc=Ao fabricar, o Recombinador funciona de forma similar à Centrífuga Misturadora. Os fluidos devem ser canalizados para o bloco inferior e extraídos do superior. Em seguida, a cinza deve ser adicionada aos pedestais. A cinza não é consumida durante a fabricação. Então, clique com o botão direito do mouse no globo para começar a fabricação. Quando a máquina ficar sem fluidos ou a saída encher, a fabricação irá parar, mas o Recombinador permanecerá carregado e não consumirá energia.
+
+embers.research.page.antimony=Antimônio
+embers.research.page.antimony.title=Liga Todo-Poderoso
+embers.research.page.antimony.desc=Testar sua maquinaria recém-concebida revelou um novo tipo de liga para você. Um metal maleável e denso com um brilho verde e várias propriedades alquímicas interessantes. Certamente, você descobrirá a ampla variedade de usos desse metal em breve.
+
+embers.research.page.antimony_signet=Sinete de Antimônio
+embers.research.page.antimony_signet.title=Na verdade, vale muito dinheiro.
+embers.research.page.antimony_signet.desc=O antimônio é verde e os aldeões são gananciosos e avarentos. Uma ideia surgiu em sua mente: Talvez você pudesse moldar esse metal em uma forma adequada para a troca e enganá-los com ele? E de fato, os aldeões vão trocar antimônio em vez de esmeraldas... Você sente que algo está sendo perdido, mas não consegue exatamente identificá-lo...
+
+embers.research.page.metal_leveling=Nivelamento de Metal
+embers.research.page.metal_leveling.title=Chumbo em Ouro
+embers.research.page.metal_leveling.desc=Como um efeito colateral de quadrar os círculos, você se vê capaz de fazer uma ampla variedade de coisas que seriam consideradas impossíveis. Como transformar metal sem valor em ouro. O Recombinador Alquímico pode, quando alimentado com metal e pasta alquímica, transmutar chumbo em ouro. Passo a passo, a cadeia de transmutação de metal segue como §fChumbo → Estanho → Ferro → Cobre → Prata → Ouro§r.
+
+embers.research.page.mundane_stone=Pedra Mundana
+embers.research.page.mundane_stone.title=Lendas Nunca Morrem
+embers.research.page.mundane_stone.desc=Nem todas as ferramentas foram criadas iguais. Algumas ferramentas não foram feitas para serem usadas como armas. Mas você realmente não se importa, porque descobriu que bater essa pedra em suas ferramentas as faz causar tanto dano quanto uma ferramenta equivalente que foi feita para ser uma arma. Aplicar esse aumento nem requer um slot de aumento. Você quase se sente sujo usando esse truque barato...
+
+embers.research.page.witch_fire=Brasa de Beltaine
+embers.research.page.witch_fire.title=Cidade de Salem
+embers.research.page.witch_fire.desc=Bruxas são adversárias poderosas. Elas carregam uma quantidade ilimitada de poções e, para piorar, são quase imunes a dano mágico, o que torna as armas mágicas inadequadas. Para remediar isso, você criou um novo aumento: o Brase de Beltaine dará aos projéteis de Brasa um efeito especial de queimadura que causa dano como fogo comum, mas também impede que bruxas (e outras criaturas) se curem.
+
+embers.research.page.brewing=Fabricação de Cerveja
+
+embers.research.page.still=Alambique
+embers.research.page.still.title=Cervejeiro Anão Honorário
+embers.research.page.still.desc=O Alambique é um grande recipiente de pedra da alvorada que fabrica e refina bebidas alcoólicas. O processo é um pouco complexo e funciona da seguinte maneira: Um fundidor deve ser usado para obter a base da sua bebida. A base deve ser bombeada para o fundo do recipiente grande. A torneira pode ter um item adicionado por algum tipo de encanamento de item ou uma tremonha, que afetará a bebida de certas maneiras. O líquido destilado finalmente sairá em um recipiente abaixo da torneira.
+
+embers.research.page.still_fuel=Aquecendo o Alambique
+embers.research.page.still_fuel.title=Atiçando as Chamas
+embers.research.page.still_fuel.desc=O Alambique requer calor para todas as operações. Pode ser simplesmente fogo ou uma lâmpada arcaica colocada embaixo do alambique, mas o alambique funcionará muito lentamente se fornecido dessa forma. Alternativamente, uma Bobina de Lareira pode ser colocada embaixo do alambique, com o recipiente bem no meio da bobina. A destilação será muito rápida dessa forma, mas cara em Brasa.
+
+embers.research.page.distillation_pipe=Filtro Auxiliar
+embers.research.page.distillation_pipe.title=Dupla Destilação
+embers.research.page.distillation_pipe.desc=Ao contrário da Alquimia da Cerca Viva, a pedra luminosa não aumentará o poder dos efeitos da bebida. Em vez disso, você descobriu que adicionar uma melhoria de Filtro Auxiliar permite que o alambique destile álcool repetidamente, concentrando-o. A concentração removerá partículas do efeito e também poderá aumentar a magnitude do efeito em 1. A desvantagem é que, após a concentração, a bebida ficará mais alcoólica e com maior probabilidade de te deixar tonto...
+
+embers.research.page.decanter=Essence Decanter
+embers.research.page.decanter.title=Effect Extraction
+embers.research.page.decanter.desc=All fluids contain some manner of alchemical aspect. Applying the Essence Decanter to a Still allows you to extract some of these aspects. The aspects will be collected in the top half of the Decanter, and can be bottled in flasks by hand or by an item pipe.
+
+embers.research.page.alchemy_dial=Alquimia Dial
+embers.research.page.alchemy_dial.title=Análise Detalhada
+embers.research.page.alchemy_dial.desc=Cervejeiros experientes podem analisar a produção da cerveja por instinto, mas os novatos geralmente ficam para trás. Este Dialquimista vai ajudar com isso. Conectá-lo a um tanque de fluido contendo uma cerveja identificará todas as suas propriedades. Considerando o alto custo deste dispositivo de medição, outros usos certamente devem existir... Talvez eles se revelem em breve.
+
+embers.research.page.ale=Cerveja
+embers.research.page.ale.title=Obrigado Lucy
+embers.research.page.ale.desc=Você sabe por que nossos ancestrais pararam de caçar mamutes com espadas de pedra? A resposta é Cerveja, que os tornou poderosos o suficiente para simplesmente socar o pobre animal até a morte com as próprias mãos. Beber Cerveja lhe dará um aumento de dano cumulativo. Este aumento de dano pode ser acumulado até 5 vezes, para até +400%%! No entanto, quando você leva um golpe sob os efeitos da Cerveja, você também receberá dano extra.
+
+embers.research.page.vodka=Vodka
+embers.research.page.vodka.title=Na sdorówje!
+embers.research.page.vodka.desc=A Vodka é essencialmente o oposto da Cerveja. Em vez de torná-lo absurdamente poderoso, esta bebida lhe dará um bônus de defesa cumulativo, mas o fará causar menos dano em troca. E antes mesmo que você pense nisso: Não, isso não anulará o efeito negativo da Cerveja.
+
+embers.research.page.verdigris=Câncer Verde
+embers.research.page.verdigris.title=Apenas Veneno
+embers.research.page.verdigris.desc=O Câncer Verde é o precursor desagradável do Absinto. Beber isso não é bom para você e você não deve fazer isso. Talvez você possa encontrar um uso diferente para essa lama desagradável... algum dia...
+
+embers.research.page.absinthe=Absinto
+embers.research.page.absinthe.title=Cegueira Não Incluída
+embers.research.page.absinthe.desc=O Absinto é veneno com doçura açucarada. Esta bebida realmente abre seu olho interior e faz o mundo parecer nebuloso. Enquanto estiver sob os efeitos desta bebida, você acumulará pontos de experiência constantemente. Considerando o tipo de visões que isso lhe dá, ficar cego pode ter sido preferível...
+
+embers.research.page.methanol=Álcool Metílico
+embers.research.page.methanol.title=Cuspidor de Fogo
+embers.research.page.methanol.desc=O álcool é inflamável. Esta bebida mal se qualifica como uma bebida real, é mais uma arma. Beber isso vai te deixar muito doente, mas por outro lado, se você cuspir na hora pela chama aberta de uma tocha acesa, você basicamente pode cuspir fogo.
+
+embers.research.page.inner_fire=Inner Fire Ale
+embers.research.page.inner_fire.title=Homem Local Bêbado Demais para Morrer
+embers.research.page.inner_fire.desc=Oh, du lieber Augustin. Esta bebida realmente tem um poder de fogo ardente. Ao consumir esta bebida, por um breve período você se torna quase imune a dano de fogo. Além disso, se você atacar um inimigo sob este efeito, causará dano de fogo extra como se tivesse uma arma encantada com Aspecto de Fogo.
+
+embers.research.page.snowpoff_vodka=Snowpoff Vodka
+embers.research.page.snowpoff_vodka.title=Guerra de Bola de Neve
+embers.research.page.snowpoff_vodka.desc=Continuando a tendência de efeitos defensivos, esta prima especializada da Vodka comum envolverá o bebedor em gelo e neve. Ao sofrer dano sob este efeito, seu corpo explodirá em várias bolas de neve que causam dano aos inimigos e os repelem.
+
+embers.research.page.beetroot_soup=Sopa de Beterraba
+embers.research.page.beetroot_soup.title=Sopa de Beterraba
+embers.research.page.beetroot_soup.desc=Sopa de Beterraba. É deliciosa e satisfatória. Não é realmente uma bebida, mas também não é exatamente uma comida. No entanto, vai saciar a sua fome como uma comida, embora seja um pouco sem graça. Talvez colocar mais ingredientes funcione?
+
+embers.research.page.drinks=Bebidas
+embers.research.page.drinks.title=Uma Introdução
+embers.research.page.drinks.desc=Existem várias bebidas disponíveis para fermentação: Cerveja, que aumenta o dano causado e recebido significativamente; Vodka de Batata, que faz o oposto; Inner Fire Ale, que concede resistência ao fogo e ataques flamejantes; Absinto, que rapidamente concede inspiração ao custo da sanidade; Snowpoff Vodka, que concede uma forma de efeito de espinhos de gelo; e Álcool Metílico, que permite ao bebedor cuspir fogo usando uma tocha.
+
+embers.research.page.rename=Mudança de Nome
+embers.research.page.rename.title=Fama e Glória
+embers.research.page.rename.desc=Discernir qual caneca contém qual cerveja pode ser bastante difícil se você criou uma grande quantidade de cervejas diferentes. Para este fim, você pode ser um pouco mais organizado com a sua fermentação. Se uma placa for fixada em qualquer lado da parte inferior do Alambique, a saída do Alambique será nomeada de acordo com o que está escrito na placa. Isso será muito útil para rotular suas cervejas - e se gabar, eu acho...
+
+embers.research.page.lifedrinker=Bebe-Vida
+embers.research.page.lifedrinker.title=CR 25
+embers.research.page.lifedrinker.desc=Bebe-Vida é um modificador aplicável a qualquer álcool. Quando uma bebida com Bebe-Vida é consumida e um inimigo é morto, ela concede 1 ponto de vida extra adicionado ao máximo. Todos os pontos de vida ganhos com este efeito desaparecem junto com o efeito, mas o efeito pode ser prolongado aplicando o modificador com mais frequência.
+
+embers.research.page.steadfast=Firme
+embers.research.page.steadfast.title=Acelerando como uma Lebre
+embers.research.page.steadfast.desc=Firme é um modificador aplicável a qualquer bebida alcoólica. Quando uma bebida com Firme é consumida, sua velocidade aumenta um pouco. Isso se acumula com a velocidade normal, mas tem a desvantagem de te deixar mais suscetível a knockback. O efeito pode ser prolongado aplicando o modificador com mais frequência.
+
+embers.research.page.experience_boost=Impulso de Experiência
+embers.research.page.experience_boost.title=Provavelmente um pouco overpowered.
+embers.research.page.experience_boost.desc=Impulso de Experiência é um modificador aplicável a qualquer bebida. Quando uma bebida com Impulso de Experiência é consumida, ela fará com que mortes de monstros e minérios quebrados forneçam experiência extra. O efeito pode ser prolongado aplicando o modificador com mais frequência.
+
+embers.research.page.glass=Vidro
+embers.research.page.glass.title=Frágil, não §frágil
+embers.research.page.glass.desc=Vidro é um modificador raro e aplicável a qualquer bebida. Quando uma bebida com Vidro é consumida, você sofrerá os efeitos negativos da Cerveja, mas nenhum dos efeitos positivos. Isso significa que você receberá muito mais dano de ataques. O efeito pode ser prolongado aplicando o modificador com mais frequência.
+
+embers.research.page.duration=Duração
+embers.research.page.duration.title=Prolongando o Inevitável
+embers.research.page.duration.desc=Assim como na Alquimia das Cercas, o redstone tem um efeito de prolongamento em bebidas alcoólicas. A aplicação deste modificador aumenta a duração de todos os efeitos concedidos pela bebida. A duração pode aumentar ainda mais aplicando este modificador várias vezes. Esteja avisado que o redstone é um composto de mercúrio ou arsênico e adicionará uma pequena quantidade de toxidade à sua bebida.
+
+embers.research.page.purification=Purificação
+embers.research.page.purification.title=Curando a Tolice
+embers.research.page.purification.desc=Ao adicionar alguns modificadores, devido aos materiais que são misturados em sua bebida, pode adicionar uma pequena quantidade de toxidade a ela. A toxicidade vem com efeitos desagradáveis como náusea e vômito. Ao adicionar cristais de prismarinho, algumas das toxinas são eliminadas da bebida, tornando-a mais segura para o consumo.
+
+embers.research.page.tainting=Contaminação
+embers.research.page.tainting.title=Vinho para um Lorde
+embers.research.page.tainting.desc=Adicionar Olho de Aranha Fermentado a uma bebida removerá todos os efeitos positivos que a bebida tinha, transformando-a em uma sopa inerte na melhor das hipóteses e em um veneno horrível na pior.
+
+embers.research.page.sweetening=Adoçamento
+embers.research.page.sweetening.title=Frostschutzwein
+embers.research.research.page.sweetening.desc=Adicionar açúcar é uma alternativa segura a outros venenos químicos para tornar a bebida mais doce. As bebidas mais doces podem até conceder um efeito regenerativo em você. Ao custo de cáries.
+
+embers.research.page.healing=Cura
+embers.research.page.healing.title=Ganacioso
+embers.research.page.healing.desc=Adicionar Verruga do Nether a uma bebida adicionará um pouco de recuperação de saúde imediatamente quando bebida. No entanto, este efeito não é gratuito - a Verruga do Nether simplesmente acelera a digestão, fornecendo cura às custas da fome. Portanto, adicionar muitas pilhas deste modificador pode fazer com que você morra de fome ao consumir a bebida.
+
+embers.research.page.cooling=Resfriamento
+embers.research.page.cooling.title=Prevenir Escaldamento
+embers.research.page.cooling.desc=Algumas bebidas são bem quentes e, quando ingeridas, podem causar escaldamento ou até combustão. Adicionando pequenos pedaços de gelo à bebida, ela pode ser resfriada a níveis mais seguros.
+
+embers.research.page.stew=Ensopado
+embers.research.page.stew.title=Ferver, Amassar...
+embers.research.page.stew.desc=Sopa de Beterraba é boa, mas é um pouco sem graça. Adicionar batatas, cenouras ou outros alimentos pode tornar a sopa mais saborosa e satisfatória. Apenas tome cuidado ao adicionar trigo, pois embora seja satisfatório, aumentará drasticamente o tempo que leva para beber a sopa.
+
+embers.research.page.essence=Essência
+embers.research.page.essence.title=Injeção de Efeito
+embers.research.page.essence.desc=Essências coletadas em recipientes adequados podem ser usadas como catalisadores na fermentação e imbuir seus aspectos alquímicos na bebida. Este método de adição de efeito é muito mais eficiente e permite que você ignore certos limites e até mesmo ganhe modificadores exóticos que não conseguiria de nenhuma outra forma.
+
+embers.research.page.alchemical_mixer_category=Mistura Alquímica
+embers.research.page.primary_effects_category=Efeitos Primários
+embers.research.page.secondary_effects_category=Efeitos Secundários
+embers.research.page.tertiary_effects_category=Efeitos Terciários
+
+entity.muse.name=Musa
+
+tile.sulfur_ore.name=Minério de Enxofre
+
+tile.ember_burst.name=Explosão de Brasas
+tile.still.name=Alambique
+
+tile.alchemy_globe.name=Recombinador Alquímico
+tile.insulation.name=Isolamento Térmico
+tile.distillation_pipe.name=Filtro Auxiliar
+tile.decanter.name=Decantador de Essência
+
+tile.scale.name=Balança
+tile.redstone_bin.name=Caixa com Alçapão
+tile.alchemy_gauge.name=Dial Alquímico
+
+tile.caminite_clay.name=Mistura de Caminita
+tile.caminite_tiles.name=Telhas de Caminita
+tile.caminite_tiles_slab.name=Laje de Telha de Caminita
+tile.caminite_tiles_stairs.name=Escada de Telha de Caminita
+tile.caminite_large_tile.name=Grande Telha de Caminita
+tile.caminite_large_tile_slab.name=Laje de Grande Telha de Caminita
+tile.caminite_large_tile_stairs.name=Escada de Grande Telha de Caminita
+tile.archaic_tile_slab.name=Laje de Telha Arcaica
+tile.archaic_tile_stairs.name=Escada de Telha Arcaica
+tile.archaic_big_bricks.name=Grandes Tijolos Arcaicos
+tile.archaic_big_bricks_slab.name=Laje de Grande Tijolo Arcaico
+tile.archaic_big_bricks_stairs.name=Escada de Grande Tijolo Arcaico
+tile.archaic_bricks_slab.name=Laje de Tijolo Arcaico
+tile.archaic_bricks_stairs.name=Escada de Tijolo Arcaico
+tile.sealed_planks_slab.name=Laje de Tábua Selada
+tile.sealed_planks_stairs.name=Escada de Tábua Selada
+tile.sealed_tile.name=Telha de Madeira Selada
+tile.sealed_tile_slab.name=Laje de Telha de Madeira Selada
+tile.sealed_tile_stairs.name=Escada de Telha de Madeira Selada
+tile.sealed_keg.name=Barril de Madeira Selado
+tile.sealed_pillar.name=Pilar de Madeira Selado
+tile.wrought_tile.name=Telha de Ferro Batido
+tile.wrought_platform.name=Plataforma de Ferro Batido
+tile.wrought_platform_slab.name=Laje de Plataforma de Ferro Batido
+
+item.mug.name=Caneca de %s
+item.mug.empty.name=Caneca Vazia
+item.signet_antimony.name=Sinete de Antimônio
+item.ingot_antimony.name=Lingote de Antimônio
+item.stamp_text_raw.name=Selo de Inscrição Bruta
+item.stamp_text.name=Selo de Inscrição
+item.stamp_nugget_raw.name=Selo de Pepita Bruta
+item.stamp_nugget.name=Selo de Pepita
+item.sulfur.name=Enxofre
+item.sulfur_clump.name=Fígado de Enxofre
+item.eitr.name=Eitr
+item.mundane_stone.name=Pedra Mundana
+item.witch_fire.name=Brasa de Beltaine
+item.essence.name=%s
+
+fluid.sugar=Açúcar Fundido
+fluid.antimony=Antimônio Fundido
+fluid.boiling_wort=Mosto de Trigo Fervendo
+fluid.boiling_potato_juice=Suco de Batata Fervendo
+fluid.boiling_wormwood=Verdegris Fervendo
+fluid.boiling_beetroot_soup=Sopa de Beterraba Fervendo
+fluid.dwarven_ale=Cerveja Anã
+fluid.root_beer=Cerveja de Raiz
+fluid.vodka=Vodka de Batata
+fluid.absinthe=Absinto
+fluid.methanol=Álcool Metilado
+fluid.umber_ale=Cerveja Umber [WIP]
+fluid.inner_fire=Cerveja do Fogo Interior
+fluid.snowpoff=Snowpoff Vodka
+
+potion.potency.2=III
+potion.potency.3=IV
+potion.potency.4=V
+potion.potency.5=VI
+potion.potency.6=VII
+potion.potency.7=VIII
+potion.potency.8=IX
+potion.potency.9=X
+
+effect.ale=Cerveja
+effect.stoutness=Corpulência
+effect.tipsy=Tontura
+effect.inner_fire=Fogo Interior
+effect.lifedrinker=Sugador de Vida
+effect.inspiration=Inspiração
+effect.fire_lung=Pulmão de Fogo
+effect.snowpoff=Snowpoff
+effect.steadfast=Firme
+effect.witchburn=Queimadura de Bruxa
+effect.glass=Vidrificado
+effect.experience_boost=Impulso de Experiência
+
+embers.tooltip.modifier.mundane=Mundano %s
+embers.tooltip.modifier.witchburn=Queimadura de Bruxa %s
+
+attribute.name.generic.physicalDamageRate=Dano Físico Recebido
+attribute.name.generic.fireDamageRate=Dano de Fogo Recebido
+attribute.name.generic.fireAspect=Aspecto de Fogo
+attribute.name.generic.barehandedPower=Dano de Ataque Desarmado
+
+death.attack.witchBurn=%1$s queimado na fogueira
+death.attack.scalding=%1$s bebeu muito café quente
+death.attack.acid=%1$s se dissolveu
+
+message.scalding=§cAí! Quente...!
+
+distilling.essence.chaos.name=Essência do Caos
+distilling.essence.cloud.name=Essência Nebulosa
+distilling.essence.death.name=Essência da Morte
+distilling.essence.experience.name=Essência da Inteligencia
+distilling.essence.fire.name=Essência Ígnea
+distilling.essence.glass.name=Essência Vítrea
+distilling.essence.haste.name=Essência da Rapidez
+distilling.essence.ice.name=Essência Gélida
+distilling.essence.inversion.name=Essência Inversora
+distilling.essence.lifedrinker.name=Essência Vampírica
+distilling.essence.null.name=Essência Vazia
+distilling.essence.poison.name=Essência Fétida
+distilling.essence.projectile.name=Essência Projétil
+distilling.essence.regeneration.name=Essência Regeneradora
+distilling.essence.slowness.name=Essência da Lentidão
+distilling.essence.sour.name=Essência Ácida
+distilling.essence.speed.name=Essência da Velocidade
+distilling.essence.sweet.name=Essência Doce
+distilling.essence.toxin.name=Essência Tóxica
+distilling.essence.vile.name=Essência Vil
+distilling.essence.wither.name=Essência Minguante
+distilling.essence.extract.name=Essência Extraída
+
+distilling.effect.header=Efeitos da Destilação:
+distilling.effect.add=%s +%d
+distilling.effect.add_percent=%s +%d%%
+distilling.effect.sub=%s -%d
+distilling.effect.sub_percent=%s -%d%%
+distilling.effect.gain=%d ganho na Destilação
+distilling.effect.loss=%d perdido na Destilação
+
+distilling.effect.ale=Cerveja
+distilling.effect.stoutness=Corpulência
+distilling.effect.inner_fire=Fogo Interior
+distilling.effect.snowpoff=Snowpoff
+distilling.effect.inspiration=Inspiração
+distilling.effect.fire_lung=Pulmão de Fogo
+distilling.effect.lifedrinker=Sugador de Vida
+distilling.effect.steadfast=Firme
+distilling.effect.experience_boost=Impulso de Experiência
+distilling.effect.enlightened=Iluminado
+distilling.effect.speed=Velocidade
+distilling.effect.slow=Lentidão
+distilling.effect.resistance=Resistência
+distilling.effect.glass=Vidro
+distilling.effect.regeneration=Regeneração
+distilling.effect.wither=Minguante
+distilling.effect.death=Morte
+
+distilling.effect.thick_soup=Engrossado
+distilling.effect.extract=Extrai o modificador mais fraco
+distilling.effect.erase_positive=Remove todos os modificadores positivos
+distilling.effect.vile=Converte toxicidade em dano à saúde
+
+distilling.effect.double_distillation=§dDestilação Dupla
+distilling.effect.double_distillation.desc=§dRequer Filtro Auxiliar Aprimorado
+distilling.effect.decanter=§dExtração de Essência
+distilling.effect.decanter.desc=§dRequer Decantador de Essência Aprimorado
+distilling.effect.decanter.essence=Produz %2$s %1$s
+distilling.effect.decanter.extract=Produz essência a partir do modificador removido
+
+distilling.modifier.toxicity.name=Toxicidade
+distilling.modifier.concentration.name=Concentração
+distilling.modifier.duration.name=Duração
+distilling.modifier.heat.name=Temperatura
+distilling.modifier.viscosity.name=Viscosidade
+distilling.modifier.light.name=Luminescência
+distilling.modifier.health.name=Saúde Restaurada
+distilling.modifier.hunger.name=Fome Restaurada
+distilling.modifier.saturation.name=Saturação Restaurada
+distilling.modifier.sweetness.name=Doçura
+
+distilling.modifier.ale.name=Cerveja
+distilling.modifier.stoutness.name=Corpulência
+distilling.modifier.inner_fire.name=Fogo Interior
+distilling.modifier.inspiration.name=Inspiração
+distilling.modifier.fire_lung.name=Pulmão de Fogo
+distilling.modifier.snowpoff.name=Snowpoff
+
+distilling.modifier.lifedrinker.name=Sugador de Vida
+distilling.modifier.steadfast.name=Firme
+distilling.modifier.enlightened.name=Iluminado
+distilling.modifier.speed.name=Velocidade
+distilling.modifier.slow.name=Lentidão
+distilling.modifier.resistance.name=Resistência
+distilling.modifier.glass.name=Vidro
+distilling.modifier.regeneration.name=Regeneração
+distilling.modifier.experience_boost.name=Impulso de Experiência
+
+distilling.modifier.volume.name=Volume
+distilling.modifier.fuel.name=Inflamabilidade
+
+embers.decimal_format.distilling.linear=0
+embers.decimal_format.distilling.percent=0'%%'
+embers.decimal_format.distilling.multiplier=0.#x
+embers.decimal_format.distilling.health=+0;-0
+embers.decimal_format.distilling.hunger=+0;-0
+embers.decimal_format.modifier.linear=#.####
+embers.decimal_format.modifier.percent=#'%%'
+embers.decimal_format.modifier.multiplier=#%%
+
+distilling.modifier.dial.name=- %s
+distilling.modifier.dial.linear=- %s: %s
+distilling.modifier.dial.percent=- %s: %s
+distilling.modifier.dial.multiplier=- %s: %s
+distilling.modifier.dial.name_only=- %s
+distilling.modifier.dial.health=- %s Saúde
+distilling.modifier.dial.hunger=- %d Comida
+distilling.modifier.dial.slower_chugging=- Engolida Mais Lenta
+distilling.modifier.dial.faster_chugging=- Engolida Mais Rápida
+distilling.modifier.dial.fire_retardant=- Retardante de Fogo
+
+subtitles.sulfur_ore.vent=Minério de Enxofre libera nuvem corrosiva
+
+cfg.soot.soot=Fuligem
+cfg.soot.soot.desc=Opções de Configuração para Fuligem
+cfg.soot.overrides=Substituições
+cfg.soot.overrides.desc=Substituições para várias Máquinas Embers
+cfg.soot.sulfur_ore=Minério de Enxofre
+cfg.soot.sulfur_ore.desc=Opções de Configuração para Minério de Enxofre
