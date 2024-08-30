@@ -87,7 +87,7 @@ public class TileEntityEmberBurst extends TileEntity implements ITileEntityBase,
         tag.setInteger("east", east.ordinal());
         for (int i = 0; i < 6; i++)
         {
-            EnumFacing facing = EnumFacing.getFront(i);
+            EnumFacing facing = EnumFacing.byIndex(i);
             String key = "target" + facing.getName();
             BlockPos target = targets[i];
             if(target == null)
@@ -113,7 +113,7 @@ public class TileEntityEmberBurst extends TileEntity implements ITileEntityBase,
         east = connectionFromInt(tag.getInteger("east"));
         for (int i = 0; i < 6; i++)
         {
-            EnumFacing facing = EnumFacing.getFront(i);
+            EnumFacing facing = EnumFacing.byIndex(i);
             String key = "target" + facing.getName();
             if(!tag.hasKey(key))
                 continue;
@@ -180,11 +180,11 @@ public class TileEntityEmberBurst extends TileEntity implements ITileEntityBase,
             }
         }
 
-        EnumFacing targetFacing = EnumFacing.getFront(targetIndex);
+        EnumFacing targetFacing = EnumFacing.byIndex(targetIndex);
         if(targetFacing == facing.getOpposite()) //Don't try to shoot out the back
             nextTarget();
 
-        if (!world.isRemote && (this.ticksExisted+offset) % 4 == 0 && world.isBlockIndirectlyGettingPowered(pos) != 0 && this.capability.getEmber() > 10){
+        if (!world.isRemote && (this.ticksExisted+offset) % 4 == 0 && world.getRedstonePowerFromNeighbors(pos) != 0 && this.capability.getEmber() > 10){
             BlockPos target = targets[targetIndex];
             nextTarget();
             if(target != null) {
@@ -196,7 +196,7 @@ public class TileEntityEmberBurst extends TileEntity implements ITileEntityBase,
 
                         Vec3d velocity = getBurstVelocity(targetFacing);
                         packet.initCustom(pos, target, velocity.x, velocity.y, velocity.z, Math.min(TRANSFER_RATE, capability.getEmber()));
-                        packet.setPosition(pos.getX() + 0.5f + facing.getFrontOffsetX() * 0.4f,pos.getY() + 0.5f + facing.getFrontOffsetY() * 0.4f,pos.getZ() + 0.5f + facing.getFrontOffsetZ() * 0.4f);
+                        packet.setPosition(pos.getX() + 0.5f + facing.getXOffset() * 0.4f,pos.getY() + 0.5f + facing.getYOffset() * 0.4f,pos.getZ() + 0.5f + facing.getZOffset() * 0.4f);
                         this.capability.removeAmount(Math.min(TRANSFER_RATE, capability.getEmber()), true);
                         getWorld().spawnEntity(packet);
                         getWorld().playSound(null, pos, SoundManager.EMBER_EMIT, SoundCategory.BLOCKS, 1.0f, random.nextFloat()+0.5f);

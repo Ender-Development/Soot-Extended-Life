@@ -159,7 +159,7 @@ public class MiscUtil {
             NBTTagCompound display = compound.getCompoundTag("display");
             if(display.hasKey("Lore",9)) {
                 NBTTagList lore = display.getTagList("Lore",8);
-                if(!lore.hasNoTags())
+                if(!lore.isEmpty())
                     for (int i = 0; i < lore.tagCount(); ++i)
                         addedLore.add(lore.getStringTagAt(i));
             }

@@ -49,8 +49,8 @@ public class BlockModSlab extends BlockSlab {
     }
 
     @Override
-    public String getUnlocalizedName(int meta) {
-        return getUnlocalizedName();
+    public String getTranslationKey(int meta) {
+        return getTranslationKey();
     }
 
     @Override

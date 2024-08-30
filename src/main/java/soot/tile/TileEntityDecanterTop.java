@@ -153,26 +153,26 @@ public class TileEntityDecanterTop extends TileEntityDecanterBase implements ITi
                 float xNarrow = 0.55f;
                 float yNarrow = 0.275f;
 
-                float x1 = xBase - xWide * facing.getFrontOffsetX();
+                float x1 = xBase - xWide * facing.getXOffset();
                 float y1 = yBase - yWide;
-                float z1 = zBase - xWide * facing.getFrontOffsetZ();
-                float motionx1 = -velocity * 0.5f * facing.getFrontOffsetX() + random.nextFloat() * 0.02f - 0.01f;
+                float z1 = zBase - xWide * facing.getZOffset();
+                float motionx1 = -velocity * 0.5f * facing.getXOffset() + random.nextFloat() * 0.02f - 0.01f;
                 float motiony1 = velocity + random.nextFloat() * 0.02f - 0.01f;
-                float motionz1 = -velocity * 0.5f * facing.getFrontOffsetZ() + random.nextFloat() * 0.02f - 0.01f;
+                float motionz1 = -velocity * 0.5f * facing.getZOffset() + random.nextFloat() * 0.02f - 0.01f;
 
-                float x2 = xBase + xNarrow * facingRight.getFrontOffsetX();
+                float x2 = xBase + xNarrow * facingRight.getXOffset();
                 float y2 = yBase - yNarrow;
-                float z2 = zBase + xNarrow * facingRight.getFrontOffsetZ();
-                float motionx2 = velocity * facingRight.getFrontOffsetX() + random.nextFloat() * 0.02f - 0.01f;
+                float z2 = zBase + xNarrow * facingRight.getZOffset();
+                float motionx2 = velocity * facingRight.getXOffset() + random.nextFloat() * 0.02f - 0.01f;
                 float motiony2 = velocity + random.nextFloat() * 0.02f - 0.01f;
-                float motionz2 = velocity * facingRight.getFrontOffsetZ() + random.nextFloat() * 0.02f - 0.01f;
+                float motionz2 = velocity * facingRight.getZOffset() + random.nextFloat() * 0.02f - 0.01f;
 
-                float x3 = xBase - xNarrow * facingRight.getFrontOffsetX();
+                float x3 = xBase - xNarrow * facingRight.getXOffset();
                 float y3 = yBase - yNarrow;
-                float z3 = zBase - xNarrow * facingRight.getFrontOffsetZ();
-                float motionx3 = -velocity * facingRight.getFrontOffsetX() + random.nextFloat() * 0.02f - 0.01f;
+                float z3 = zBase - xNarrow * facingRight.getZOffset();
+                float motionx3 = -velocity * facingRight.getXOffset() + random.nextFloat() * 0.02f - 0.01f;
                 float motiony3 = velocity + random.nextFloat() * 0.02f - 0.01f;
-                float motionz3 = -velocity * facingRight.getFrontOffsetZ() + random.nextFloat() * 0.02f - 0.01f;
+                float motionz3 = -velocity * facingRight.getZOffset() + random.nextFloat() * 0.02f - 0.01f;
 
 
                 ParticleUtil.spawnParticleVapor(getWorld(), x1, y1, z1, motionx1, motiony1, motionz1, color.getRed(), color.getGreen(), color.getBlue(), 1.0f, 1.0f, 2.0f, 24);

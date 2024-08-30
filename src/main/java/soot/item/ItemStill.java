@@ -37,7 +37,7 @@ public class ItemStill extends ItemBlock {
 
     public EnumFacing getFacingForPlacement(EntityPlayer player) {
         int i = MathHelper.floor((double)(player.rotationYaw * 4.0F / 360.0F) + 0.5D) & 3;
-        return EnumFacing.getHorizontal(i);
+        return EnumFacing.byHorizontalIndex(i);
     }
 
     private boolean isFree(World world, BlockPos pos)

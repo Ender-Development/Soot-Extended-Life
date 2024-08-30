@@ -273,8 +273,8 @@ public class UpgradeAlchemyGlobe extends DefaultUpgradeProvider {
     //TODO: this should probably be a utility method
     public void ejectFailure(World world, BlockPos pos, ItemStack failure, EnumFacing direction)
     {
-        float xEject = direction.getFrontOffsetX();
-        float zEject = direction.getFrontOffsetZ();
+        float xEject = direction.getXOffset();
+        float zEject = direction.getZOffset();
 
         float xOff = world.rand.nextFloat() * 0.05F + 0.475F + xEject * 0.7F;
         float yOff = 0.5F;

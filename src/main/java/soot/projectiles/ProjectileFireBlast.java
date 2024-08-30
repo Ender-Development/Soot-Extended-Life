@@ -43,7 +43,7 @@ public class ProjectileFireBlast implements IProjectilePreset {
         }
 
         public void emit() {
-            Vec3d pos = preset.pos.addVector(preset.velocity.x * ticks,preset.velocity.y * ticks,preset.velocity.z * ticks);
+            Vec3d pos = preset.pos.add(preset.velocity.x * ticks,preset.velocity.y * ticks,preset.velocity.z * ticks);
             PacketHandler.INSTANCE.sendToDimension(new MessageFireBlastFX(pos.x,pos.y,pos.z,preset.color,(float)preset.radius,7),world.provider.getDimension());
             AxisAlignedBB box = new AxisAlignedBB(pos,pos);
             box = box.grow(preset.radius);

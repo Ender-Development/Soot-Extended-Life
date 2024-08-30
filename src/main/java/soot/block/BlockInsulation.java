@@ -45,7 +45,7 @@ public class BlockInsulation extends Block {
     }
 
     @Override
-    public BlockRenderLayer getBlockLayer() {
+    public BlockRenderLayer getRenderLayer() {
         return BlockRenderLayer.CUTOUT;
     }
 
@@ -61,7 +61,7 @@ public class BlockInsulation extends Block {
 
     @Override
     public IBlockState getStateFromMeta(int meta) {
-        return getDefaultState().withProperty(FACING,EnumFacing.getFront(meta & 7));
+        return getDefaultState().withProperty(FACING,EnumFacing.byIndex(meta & 7));
     }
 
     @Override

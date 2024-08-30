@@ -33,7 +33,7 @@ public class MessageMixerFailFX implements IMessage {
         x = buf.readDouble();
         y = buf.readDouble();
         z = buf.readDouble();
-        facing = EnumFacing.getFront(buf.readInt());
+        facing = EnumFacing.byIndex(buf.readInt());
     }
 
     @Override
@@ -55,9 +55,9 @@ public class MessageMixerFailFX implements IMessage {
                 for(int i = 0; i < 20; i++) {
                     float speed = 0.125f * random.nextFloat();
                     float spread = 0.025f*3;
-                    float vx = facing.getFrontOffsetX() * speed + spread * (random.nextFloat() - 0.5f);
-                    float vy = facing.getFrontOffsetY() * speed + spread * (random.nextFloat() - 0.5f);
-                    float vz = facing.getFrontOffsetZ() * speed + spread * (random.nextFloat() - 0.5f);
+                    float vx = facing.getXOffset() * speed + spread * (random.nextFloat() - 0.5f);
+                    float vy = facing.getYOffset() * speed + spread * (random.nextFloat() - 0.5f);
+                    float vz = facing.getZOffset() * speed + spread * (random.nextFloat() - 0.5f);
                     ParticleUtil.spawnParticleSmoke(world, (float) message.x, (float) message.y, (float) message.z, vx, vy, vz, 32, 32, 32, 0.5f, 2.0f + Misc.random.nextFloat(), 24);
                 }
             });

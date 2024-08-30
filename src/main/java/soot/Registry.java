@@ -528,7 +528,7 @@ public class Registry {
     public static void registerBlock(String id, Block block) {
         if(block.getRegistryName() == null)
             block.setRegistryName(Soot.MODID, id);
-        block.setUnlocalizedName(id);
+        block.setTranslationKey(id);
         registerBlock(block, true);
     }
 
@@ -540,7 +540,7 @@ public class Registry {
 
     public static void registerItem(String id, Item item) {
         item.setRegistryName(Soot.MODID, id);
-        item.setUnlocalizedName(id);
+        item.setTranslationKey(id);
         registerItem(item, true);
     }
 

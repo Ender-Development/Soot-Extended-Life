@@ -103,7 +103,7 @@ public class PotionFireLung extends PotionBase {
         {
             distance = ((EntityPlayerMP) playerIn).interactionManager.getBlockReachDistance();
         }
-        Vec3d endPos = startPos.addVector((double) f6 * distance, (double) f5 * distance, (double) f7 * distance);
+        Vec3d endPos = startPos.add((double) f6 * distance, (double) f5 * distance, (double) f7 * distance);
         RayTraceResult result = worldIn.rayTraceBlocks(startPos, endPos, useLiquids, !useLiquids, false);
         return result != null ? result.hitVec : endPos;
     }

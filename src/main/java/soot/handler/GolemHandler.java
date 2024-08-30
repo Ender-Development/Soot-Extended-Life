@@ -50,7 +50,7 @@ public class GolemHandler {
         }
         else {
             ResourceLocation location = EntityList.getKey(target);
-            boolean isGolem = location != null && location.getResourcePath().toLowerCase().contains("golem");
+            boolean isGolem = location != null && location.getPath().toLowerCase().contains("golem");
             golemClassCache.put(targetClass,isGolem);
             return isGolem;
         }

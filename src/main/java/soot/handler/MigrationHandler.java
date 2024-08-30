@@ -74,7 +74,7 @@ public class MigrationHandler {
     @SubscribeEvent
     public void missingSoundMappings(RegistryEvent.MissingMappings<SoundEvent> event) {
         for(RegistryEvent.MissingMappings.Mapping<SoundEvent> entry : event.getAllMappings()) {
-            if(entry.key.getResourceDomain().equals(Soot.MODID)) {
+            if(entry.key.getNamespace().equals(Soot.MODID)) {
                 entry.ignore();
             }
         }

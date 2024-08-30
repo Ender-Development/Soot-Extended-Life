@@ -99,7 +99,7 @@ public class ParticleCrystal extends ParticleCube {
 
         for (int i = 0; i < points.length; i++) {
             Vec3d v = points[i];
-            points[i] = v.rotatePitch(pitch).rotateYaw(yaw).addVector(x,y,z);
+            points[i] = v.rotatePitch(pitch).rotateYaw(yaw).add(x,y,z);
             /*points[i] = new Vec3d(
                     x + forward.x * v.x + forward.y * v.y + forward.z * v.z,
                     y + up.x * v.x + up.y * v.y + up.z * v.z,

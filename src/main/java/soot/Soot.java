@@ -48,7 +48,7 @@ public class Soot {
         log = event.getModLog();
         creativeTab = new CreativeTabs("soot") {
             @Override
-            public ItemStack getTabIconItem() {
+            public ItemStack createIcon() {
                 return new ItemStack(ItemRegister.DUST_ASH);
             }
         };
