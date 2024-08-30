@@ -2,6 +2,19 @@
 
 A dwarven magic addon
 
+## v1.12.0 - GroovyScript
+### Changes
+- added GroovyScript support for:
+  - Alchemical Mixer
+  - Still
+  - Still Catalysts
+- improved JEI integration for the Still by adding a tooltip for the catalysts
+- updated external dependencies
+- updated mappings
+
+### Bugfixes
+- fixed the broken JEI integration for the Alchemical Mixer
+
 ## v1.11.1 - Bugfixes
 ### Changes
 - renamed attributes and added missing localization
