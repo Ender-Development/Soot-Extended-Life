@@ -11,7 +11,7 @@ dependencies {
 
     compileOnly "com.azanor.baubles:Baubles:1.12-" + project.version_baubles
     if (project.debug_baubles.toBoolean()
-            || project.debug_aetherworks.toBoolean()) {
+            || project.debug_aetheriumashenarmor.toBoolean()) {
         runtimeOnly "com.azanor.baubles:Baubles:1.12-" + project.version_baubles
     }
 
@@ -32,10 +32,10 @@ dependencies {
         runtimeOnly rfg.deobf("curse.maven:mystical-gears-317915:" + project.version_mysticalgears)
     }
 
-    compileOnly rfg.deobf("curse.maven:aetherworks-293905:" + project.version_aetherworks)
+    compileOnly rfg.deobf("curse.maven:aetherworks-extended-life-1003576:" + project.version_aetherworks)
     if (project.debug_aetherworks.toBoolean()
             || project.debug_aetheriumashenarmor.toBoolean()) {
-        runtimeOnly rfg.deobf("curse.maven:aetherworks-293905:" + project.version_aetherworks)
+        runtimeOnly rfg.deobf("curse.maven:aetherworks-extended-life-1003576:" + project.version_aetherworks)
     }
 
     compileOnly rfg.deobf("curse.maven:aetherium-ashen-armor-359467:" + project.version_aetheriumashenarmor)
