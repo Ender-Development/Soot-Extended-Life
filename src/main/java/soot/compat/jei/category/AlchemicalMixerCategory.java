@@ -67,6 +67,7 @@ public class AlchemicalMixerCategory implements IRecipeCategory<AlchemicalMixerW
         fluid.init(2, true, 66, 3, 16, 16, 16, true, null);
         fluid.init(3, true, 66, 45, 16, 16, 16, true, null);
         fluid.init(4, false, 89, 16, 16, 32, 16, true, null);
+        recipeWrapper.helper = helper;
         helper.addAspectStacks(recipeWrapper,stacks,0);
         //stacks.addTooltipCallback((slotIndex, input, ingredient, tooltip) -> tooltip.clear());
 
@@ -80,12 +81,5 @@ public class AlchemicalMixerCategory implements IRecipeCategory<AlchemicalMixerW
         fluid.set(4, ingredients.getOutputs(FluidStack.class).get(0));
 
         lastRecipe = recipeWrapper.recipe;
-    }
-
-    @Override
-    public void drawExtras(Minecraft minecraft) {
-        if(lastRecipe != null) {
-            helper.drawAspectBars(minecraft,lastRecipe);
-        }
     }
 }

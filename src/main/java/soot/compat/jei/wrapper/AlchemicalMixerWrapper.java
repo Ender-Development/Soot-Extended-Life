@@ -2,9 +2,11 @@ package soot.compat.jei.wrapper;
 
 import mezz.jei.api.ingredients.IIngredients;
 import mezz.jei.api.recipe.IRecipeWrapper;
+import net.minecraft.client.Minecraft;
 import net.minecraftforge.fluids.FluidStack;
 import soot.recipe.RecipeAlchemicalMixer;
 import teamroots.embers.api.alchemy.AspectList;
+import teamroots.embers.util.AspectRenderUtil;
 import teamroots.embers.util.IHasAspects;
 
 public class AlchemicalMixerWrapper implements IRecipeWrapper, IHasAspects {
@@ -14,6 +16,8 @@ public class AlchemicalMixerWrapper implements IRecipeWrapper, IHasAspects {
     {
         this.recipe = recipe;
     }
+
+    public AspectRenderUtil helper;
 
     @Override
     public void getIngredients(IIngredients ingredients) {
@@ -28,5 +32,10 @@ public class AlchemicalMixerWrapper implements IRecipeWrapper, IHasAspects {
     @Override
     public AspectList.AspectRangeList getAspects() {
         return recipe.getAspects();
+    }
+
+    @Override
+    public void drawInfo(Minecraft minecraft, int recipeWidth, int recipeHeight, int mouseX, int mouseY) {
+        helper.drawAspectBars(minecraft, this);
     }
 }
