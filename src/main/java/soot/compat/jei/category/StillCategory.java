@@ -5,6 +5,7 @@ import mezz.jei.api.gui.*;
 import mezz.jei.api.ingredients.IIngredients;
 import mezz.jei.api.recipe.IRecipeCategory;
 import mezz.jei.util.Translator;
+import net.minecraft.client.Minecraft;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.fluids.FluidStack;
@@ -83,8 +84,9 @@ public class StillCategory implements IRecipeCategory<StillWrapper> {
             }
         });
         List<List<ItemStack>> inputStacks = ingredients.getInputs(ItemStack.class);
-        if (inputStacks.size() > 0)
+        if (inputStacks.size() > 0) {
             stacks.set(0, inputStacks.get(0));
+        }
         for (int i = 1; i <= Math.min(3, recipeInfos.size()); i++) {
             stacks.set(i, recipeInfos.get(i - 1).getStacks());
         }

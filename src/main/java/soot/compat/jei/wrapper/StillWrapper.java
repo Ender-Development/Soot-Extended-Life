@@ -7,6 +7,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.util.text.TextFormatting;
 import net.minecraftforge.fluids.FluidStack;
 import soot.compat.jei.ExtraRecipeInfo;
+import soot.recipe.CraftingRegistry;
 import soot.recipe.RecipeStill;
 import soot.recipe.RecipeStillModifier;
 
@@ -34,8 +35,14 @@ public class StillWrapper implements IRecipeWrapper {
 
     @Override
     public List<String> getTooltipStrings(int mouseX, int mouseY) {
-        if(mouseX >= 8 && mouseY >= 47 && mouseX < 8 + 16 && mouseY < 47 + 16)
-            return Lists.newArrayList(recipe.id.toString());
+        if(mouseX >= 8 && mouseY >= 47 && mouseX < 8 + 16 && mouseY < 47 + 16) {
+            if (recipe.getCatalysts().isEmpty()) return Lists.newArrayList(recipe.id.toString());
+            return Lists.newArrayList(
+                    recipe.catalystInput.getMatchingStacks()[0].getDisplayName(),
+                    TextFormatting.GRAY + "Value per Item: " + CraftingRegistry.getStillCatalyst(recipe.catalystInput.getMatchingStacks()[0]),
+                    TextFormatting.GRAY + "Consumed per Recipe: " + recipe.catalystConsumed
+            );
+        }
         return IRecipeWrapper.super.getTooltipStrings(mouseX,mouseY);
     }
 
