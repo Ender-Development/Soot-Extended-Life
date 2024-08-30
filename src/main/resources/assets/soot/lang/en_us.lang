@@ -404,3 +404,7 @@ cfg.soot.overrides=Overrides
 cfg.soot.overrides.desc=Overrides for various Embers Machinery
 cfg.soot.sulfur_ore=Sulfur Ore
 cfg.soot.sulfur_ore.desc=Config options for Sulfur Ore
+
+groovyscript.wiki.soot.alchemical_mixer.title=Alchemical Mixer
+groovyscript.wiki.soot.alchemical_mixer.description=The Alchemical Mixer is a device that can be used to mix fluids and ash to create new fluids. The Mixer requires a globe to be placed on top of it, and pedestals to be placed around it. The Mixer will then mix the fluids and ash in the pedestals to create new fluids.
+groovyscript.wiki.soot.alchemical_mixer.aspects.value=Sets what aspects are part of the recipe and their minimum/maximum values.
