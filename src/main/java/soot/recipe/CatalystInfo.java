@@ -24,6 +24,6 @@ public class CatalystInfo {
 
     @Override
     public String toString() {
-        return String.format("%s (%s)",matcher,amt);
+        return String.format("%s (%s)",matcher.getMatchingStacks()[0].getTranslationKey(),amt);
     }
 }

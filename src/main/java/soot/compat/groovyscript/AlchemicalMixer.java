@@ -72,7 +72,7 @@ public class AlchemicalMixer extends VirtualizedRegistry<RecipeAlchemicalMixer> 
     @Property(property = "fluidInput", valid = {@Comp(value = "2", type = Comp.Type.GTE), @Comp(value = "3", type = Comp.Type.LTE)})
     @Property(property = "fluidOutput", valid = {@Comp(value = "1")})
     public static class RecipeBuilder extends AbstractRecipeBuilder<RecipeAlchemicalMixer> {
-        @Property(valid = @Comp(value = "empty", type = Comp.Type.NOT))
+        @Property(valid = @Comp(value = "empty", type = Comp.Type.NOT), value = "groovyscript.wiki.soot.alchemical_mixer.aspects.value")
         private final AspectList.AspectRangeList aspects = new AspectList.AspectRangeList();
 
         @Override
