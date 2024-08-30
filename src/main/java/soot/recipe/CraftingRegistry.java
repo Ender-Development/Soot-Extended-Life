@@ -153,23 +153,28 @@ public class CraftingRegistry {
         RecipeRegistry.meltingRecipes.add(new ItemMeltingRecipe(Ingredient.fromItem(Items.SUGAR), FluidRegistry.getFluidStack("sugar", 16))); //Nugget size -> you can combine sugar and lead into antimony without remainder and 1000 sugar store nicely in a fluid vessel
 
         ArrayList<Fluid> leveledMetals = new ArrayList<>();
-        leveledMetals.add(FluidRegistry.getFluid("lead"));
-        if (ConfigMaterial.TIN.mustLoad()) //Tin sometimes doesn't exist.
+        if (FluidRegistry.isFluidRegistered("lead"))
+            leveledMetals.add(FluidRegistry.getFluid("lead"));
+        if (FluidRegistry.isFluidRegistered("tin"))
             leveledMetals.add(FluidRegistry.getFluid("tin"));
-        leveledMetals.add(FluidRegistry.getFluid("iron"));
-        leveledMetals.add(FluidRegistry.getFluid("copper"));
-        leveledMetals.add(FluidRegistry.getFluid("silver"));
-        leveledMetals.add(FluidRegistry.getFluid("gold"));
+        if (FluidRegistry.isFluidRegistered("iron"))
+            leveledMetals.add(FluidRegistry.getFluid("iron"));
+        if (FluidRegistry.isFluidRegistered("copper"))
+            leveledMetals.add(FluidRegistry.getFluid("copper"));
+        if (FluidRegistry.isFluidRegistered("silver"))
+            leveledMetals.add(FluidRegistry.getFluid("silver"));
+        if (FluidRegistry.isFluidRegistered("gold"))
+            leveledMetals.add(FluidRegistry.getFluid("gold"));
         //Nickel and Aluminium are mundane materials
 
         for (int i = 0; i < leveledMetals.size() - 1; i++) {
             int e = i + 1;
             FluidStack currentLevel = new FluidStack(leveledMetals.get(i), 4);
             FluidStack nextLevel = new FluidStack(leveledMetals.get(e), 4);
-            addAlchemicalMixingRecipe(nextLevel, new FluidStack[]{currentLevel, FluidRegistry.getFluidStack("alchemical_redstone", 3)}, new AspectList.AspectRangeList(AspectList.createStandard(0, 0, 0, 0, (e * e) * 4), AspectList.createStandard(0, 0, 0, 0, (e * e) * 8)));
+            addAlchemicalMixingRecipe(nextLevel, new FluidStack[]{currentLevel, FluidRegistry.getFluidStack("alchemical_redstone", 3)}, new AspectList.AspectRangeList().setRange("lead", (e * e) * 4, (e * e) * 8));
         }
 
-        addAlchemicalMixingRecipe(FluidRegistry.getFluidStack("antimony", 12), new FluidStack[]{FluidRegistry.getFluidStack("lead", 8), FluidRegistry.getFluidStack("sugar", 4)}, new AspectList.AspectRangeList(AspectList.createStandard(0, 16, 0, 16, 0), AspectList.createStandard(0, 32, 0, 24, 0)));
+        addAlchemicalMixingRecipe(FluidRegistry.getFluidStack("antimony", 12), new FluidStack[]{FluidRegistry.getFluidStack("lead", 8), FluidRegistry.getFluidStack("sugar", 4)}, new AspectList.AspectRangeList().setRange("dawnstone", 16,32).setRange("silver",16,24));
         RecipeRegistry.stampingRecipes.add(new ItemStampingRecipe(Ingredient.fromItem(ItemRegister.SHARD_EMBER), FluidRegistry.getFluidStack("antimony", 144), Ingredient.fromItem(ItemRegister.STAMP_BAR), new ItemStack(Registry.SIGNET_ANTIMONY)));
         RecipeRegistry.stampingRecipes.add(new ItemStampingRecipe(Ingredient.EMPTY, FluidRegistry.getFluidStack("antimony", 144), Ingredient.fromItem(ItemRegister.STAMP_BAR), new ItemStack(Registry.INGOT_ANTIMONY)));
 
