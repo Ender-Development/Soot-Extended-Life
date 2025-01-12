@@ -1,0 +1,99 @@
+{
+    "forge_marker": 1,
+    "defaults": {
+        "model": "forge:fluid"
+    },
+    "variants": {
+        "boiling_wort": [
+            {
+                "custom": {
+                    "fluid": "boiling_wort"
+                }
+            }
+        ],
+        "boiling_potato_juice": [
+            {
+                "custom": {
+                    "fluid": "boiling_potato_juice"
+                }
+            }
+        ],
+        "boiling_wormwood": [
+            {
+                "custom": {
+                    "fluid": "boiling_wormwood"
+                }
+            }
+        ],
+        "boiling_beetroot_soup": [
+            {
+                "custom": {
+                    "fluid": "boiling_beetroot_soup"
+                }
+            }
+        ],
+        "dwarven_ale": [
+            {
+                "custom": {
+                    "fluid": "dwarven_ale"
+                }
+            }
+        ],
+        "vodka": [
+            {
+                "custom": {
+                    "fluid": "vodka"
+                }
+            }
+        ],
+        "inner_fire": [
+            {
+                "custom": {
+                    "fluid": "inner_fire"
+                }
+            }
+        ],
+        "umber_ale": [
+            {
+                "custom": {
+                    "fluid": "umber_ale"
+                }
+            }
+        ],
+        "methanol": [
+            {
+                "custom": {
+                    "fluid": "methanol"
+                }
+            }
+        ],
+        "absinthe": [
+            {
+                "custom": {
+                    "fluid": "absinthe"
+                }
+            }
+        ],
+        "snowpoff": [
+            {
+                "custom": {
+                    "fluid": "snowpoff"
+                }
+            }
+        ],
+        "antimony": [
+            {
+                "custom": {
+                    "fluid": "antimony"
+                }
+            }
+        ],
+        "sugar": [
+            {
+                "custom": {
+                    "fluid": "sugar"
+                }
+            }
+        ]
+    }
+}

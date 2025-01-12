@@ -4,6 +4,7 @@ import net.minecraft.block.Block;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
+import net.minecraft.client.renderer.block.statemap.StateMapperBase;
 import net.minecraft.client.renderer.color.BlockColors;
 import net.minecraft.client.renderer.color.ItemColors;
 import net.minecraft.client.renderer.entity.Render;
@@ -15,6 +16,7 @@ import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.client.event.ModelRegistryEvent;
 import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.fluids.BlockFluidClassic;
 import net.minecraftforge.fml.client.registry.ClientRegistry;
 import net.minecraftforge.fml.client.registry.RenderingRegistry;
 import net.minecraftforge.fml.common.ObfuscationReflectionHelper;
@@ -122,6 +124,14 @@ public class ClientProxy implements IProxy {
     public void registerBlockModel(Block block) {
         if(block instanceof IBlockColored)
             COLOR_BLOCKS.add((IBlockColored) block);
+        if(block instanceof BlockFluidClassic) {
+            final ModelResourceLocation modelResourceLocation = new ModelResourceLocation("soot:fluid", ((BlockFluidClassic) block).getFluid().getName());
+            ModelLoader.setCustomStateMapper(block, new StateMapperBase() {
+                protected ModelResourceLocation getModelResourceLocation(IBlockState state) {
+                    return modelResourceLocation;
+                }
+            });
+        }
     }
 
     @Override

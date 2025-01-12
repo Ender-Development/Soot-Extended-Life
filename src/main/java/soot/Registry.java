@@ -16,6 +16,7 @@ import net.minecraftforge.client.event.TextureStitchEvent;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.common.util.EnumHelper;
 import net.minecraftforge.event.RegistryEvent;
+import net.minecraftforge.fluids.BlockFluidClassic;
 import net.minecraftforge.fluids.Fluid;
 import net.minecraftforge.fluids.FluidRegistry;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
@@ -43,6 +44,7 @@ import soot.brewing.CaskManager;
 import soot.brewing.CaskManager.CaskLiquid;
 import soot.util.HeatManager;
 import soot.util.Nope;
+import teamroots.embers.block.BlockMolten;
 import teamroots.embers.register.BlockRegister;
 import teamroots.embers.api.EmbersAPI;
 import teamroots.embers.api.itemmod.ModifierBase;
@@ -506,6 +508,9 @@ public class Registry {
         if (withBucket)
             FluidRegistry.addBucketForFluid(fluid);
         FLUIDS.add(fluid);
+        if (ConfigSoot.WORLD_BOOZE && ConfigSoot.BUCKET_BOOZE) {
+            registerBlock(fluid.getName(), new BlockFluidClassic(fluid, fluid.getName().equals("antimony") || fluid.getName().equals("sugar") ? Material.LAVA : Material.WATER));
+        }
     }
 
     public static void registerBlockModels() {

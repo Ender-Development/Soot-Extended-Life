@@ -28,7 +28,7 @@ public class Soot {
 
     public static final String MODID = "soot";
     public static final String NAME = "Soot";
-    public static final String DEPENDENCIES = "required-after:embers@[1.23.0,);after:mixinbooter@[8.0,);";
+    public static final String DEPENDENCIES = "required-after:embers@[1.25.1,);";
     public static final String VERSIONS = Embers.VERSIONS;
 
     public static Logger log;

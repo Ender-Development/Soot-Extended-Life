@@ -11,7 +11,10 @@ A dwarven magic addon
 - improved JEI integration for the Still by adding a tooltip for the catalysts
 - updated external dependencies
 - updated mappings
+- updated dependencies
 - added a config option to register buckets for all booze types
+- added a config option to place all fluids in the world
+- minor tweak to the model registration to get the fluids rendered in world
 
 ### Bugfixes
 - fixed the broken JEI integration for the Alchemical Mixer

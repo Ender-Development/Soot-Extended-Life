@@ -44,6 +44,11 @@ public class ConfigSoot {
     @Config.Comment("Booze can be put in buckets.")
     public static boolean BUCKET_BOOZE = false;
 
+    @Config.RequiresMcRestart
+    @Config.Name("Place Booze")
+    @Config.Comment("Booze can be placed in the world.")
+    public static boolean WORLD_BOOZE = false;
+
     @Config.Name("Overrides")
     @Config.LangKey("cfg.soot.overrides")
     @Config.Comment("Overrides for various blocks and items.")
