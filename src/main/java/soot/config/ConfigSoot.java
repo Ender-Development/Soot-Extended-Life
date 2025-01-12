@@ -39,6 +39,11 @@ public class ConfigSoot {
     @Config.Comment("Enable Renaming Recipe for stamper.")
     public static boolean RENAME_STAMP = true;
 
+    @Config.RequiresMcRestart
+    @Config.Name("Bucket Booze")
+    @Config.Comment("Booze can be put in buckets.")
+    public static boolean BUCKET_BOOZE = false;
+
     @Config.Name("Overrides")
     @Config.LangKey("cfg.soot.overrides")
     @Config.Comment("Overrides for various blocks and items.")
