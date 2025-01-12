@@ -11,6 +11,7 @@ A dwarven magic addon
 - improved JEI integration for the Still by adding a tooltip for the catalysts
 - updated external dependencies
 - updated mappings
+- added a config option to register buckets for all booze types
 
 ### Bugfixes
 - fixed the broken JEI integration for the Alchemical Mixer
